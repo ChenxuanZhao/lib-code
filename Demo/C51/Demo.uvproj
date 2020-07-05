@@ -324,7 +324,7 @@
               <MiscControls></MiscControls>
               <Define></Define>
               <Undefine></Undefine>
-              <IncludePath>..\Core\Inc</IncludePath>
+              <IncludePath>../../Core/Inc</IncludePath>
             </VariousControls>
           </C51>
           <Ax51>
@@ -399,12 +399,27 @@
             <File>
               <FileName>lib-code.LIB</FileName>
               <FileType>4</FileType>
-              <FilePath>..\Core\Lib\lib-code.LIB</FilePath>
+              <FilePath>..\..\Core\Lib\C51\lib-code.LIB</FilePath>
             </File>
           </Files>
         </Group>
       </Groups>
     </Target>
   </Targets>
+
+  <LayerInfo>
+    <Layers>
+      <Layer>
+        <LayName>&lt;Project Info&gt;</LayName>
+        <LayDesc></LayDesc>
+        <LayUrl></LayUrl>
+        <LayKeys></LayKeys>
+        <LayCat></LayCat>
+        <LayLic></LayLic>
+        <LayTarg>0</LayTarg>
+        <LayPrjMark>1</LayPrjMark>
+      </Layer>
+    </Layers>
+  </LayerInfo>
 
 </Project>

@@ -324,7 +324,7 @@
               <MiscControls></MiscControls>
               <Define></Define>
               <Undefine></Undefine>
-              <IncludePath>../Core/Inc</IncludePath>
+              <IncludePath>../../Core/Inc</IncludePath>
             </VariousControls>
           </C51>
           <Ax51>
@@ -379,32 +379,47 @@
             <File>
               <FileName>tsc_getutf8char.c</FileName>
               <FileType>1</FileType>
-              <FilePath>..\Core\Src\tsc_getutf8char.c</FilePath>
+              <FilePath>..\..\Core\Src\tsc_getutf8char.c</FilePath>
             </File>
             <File>
               <FileName>tsc_ucs2toutf8.c</FileName>
               <FileType>1</FileType>
-              <FilePath>..\Core\Src\tsc_ucs2toutf8.c</FilePath>
+              <FilePath>..\..\Core\Src\tsc_ucs2toutf8.c</FilePath>
             </File>
             <File>
               <FileName>tsc_ucs2toutf8string.c</FileName>
               <FileType>1</FileType>
-              <FilePath>..\Core\Src\tsc_ucs2toutf8string.c</FilePath>
+              <FilePath>..\..\Core\Src\tsc_ucs2toutf8string.c</FilePath>
             </File>
             <File>
               <FileName>tsc_utf8toucs2.c</FileName>
               <FileType>1</FileType>
-              <FilePath>..\Core\Src\tsc_utf8toucs2.c</FilePath>
+              <FilePath>..\..\Core\Src\tsc_utf8toucs2.c</FilePath>
             </File>
             <File>
               <FileName>tsc_utf8toucs2string.c</FileName>
               <FileType>1</FileType>
-              <FilePath>..\Core\Src\tsc_utf8toucs2string.c</FilePath>
+              <FilePath>..\..\Core\Src\tsc_utf8toucs2string.c</FilePath>
             </File>
           </Files>
         </Group>
       </Groups>
     </Target>
   </Targets>
+
+  <LayerInfo>
+    <Layers>
+      <Layer>
+        <LayName>&lt;Project Info&gt;</LayName>
+        <LayDesc></LayDesc>
+        <LayUrl></LayUrl>
+        <LayKeys></LayKeys>
+        <LayCat></LayCat>
+        <LayLic></LayLic>
+        <LayTarg>0</LayTarg>
+        <LayPrjMark>1</LayPrjMark>
+      </Layer>
+    </Layers>
+  </LayerInfo>
 
 </Project>

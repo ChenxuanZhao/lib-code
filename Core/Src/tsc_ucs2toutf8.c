@@ -33,17 +33,17 @@ uint32_t TSC_Ucs2ToUtf8(uint16_t ucs2_word) {
   if (word <= 0x7F) {
     utf8_word = word & 0x7F;
   } else if (RANGE(0x80, word, 0x7FF)) {
-    utf8_word = (word >> 6 & 0x1F | 0xC0) << 8;
-    utf8_word |= word & 0x3F | 0x80;
+    utf8_word = (((word >> 6) & 0x1F) | 0xC0) << 8;
+    utf8_word |= (word & 0x3F) | 0x80;
   } else if (RANGE(0x800, word, 0xFFFF)) {
-    utf8_word = (word >> 12 & 0x0F | 0xE0) << 16;
-    utf8_word |= (word >> 6 & 0x3F | 0x80) << 8;
-    utf8_word |= word & 0x3F | 0x80;
+    utf8_word = (((word >> 12) & 0x0F) | 0xE0) << 16;
+    utf8_word |= (((word >> 6) & 0x3F) | 0x80) << 8;
+    utf8_word |= (word & 0x3F) | 0x80;
   } else if (RANGE(0x10000, word, 0x1FFFFF)) {
-    utf8_word = (word >> 18 & 0x07 | 0xF0) << 24;
-    utf8_word |= (word >> 12 & 0x3F | 0x80) << 16;
-    utf8_word |= (word >> 6 & 0x3F | 0x80) << 8;
-    utf8_word |= word & 0x3F | 0x80;
+    utf8_word = (((word >> 18) & 0x07) | 0xF0) << 24;
+    utf8_word |= (((word >> 12) & 0x3F) | 0x80) << 16;
+    utf8_word |= (((word >> 6) & 0x3F) | 0x80) << 8;
+    utf8_word |= (word & 0x3F) | 0x80;
   }
 
   return utf8_word;

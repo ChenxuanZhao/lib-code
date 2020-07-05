@@ -28,18 +28,18 @@ uint16_t TSC_Utf8ToUcs2(uint32_t utf8_word) {
   uint8_t word[4] = {0};
   uint16_t ucs2_word = 0;
 
-  word[0] = utf8_word >> 24 & 0xFF;
-  word[1] = utf8_word >> 16 & 0xFF;
-  word[2] = utf8_word >> 8 & 0xFF;
-  word[3] = utf8_word >> 0 & 0xFF;
+  word[0] = (utf8_word >> 24) & 0xFF;
+  word[1] = (utf8_word >> 16) & 0xFF;
+  word[2] = (utf8_word >> 8) & 0xFF;
+  word[3] = (utf8_word >> 0) & 0xFF;
 
   if (word[0] == 0 && word[1] == 0 && word[2] == 0) {
     ucs2_word = word[3];
   } else if (word[0] == 0 && word[1] == 0) {
-    ucs2_word = (word[2] >> 2 & 0x07) << 8;
+    ucs2_word = (uint16_t)((word[2] >> 2 & 0x07) << 8);
     ucs2_word |= (word[2] << 6) + (word[3] & 0x3F) & 0xFF;
   } else if (word[0] == 0) {
-    ucs2_word = ((word[1] << 4) + ((word[2] >> 2) & 0x0F)) << 8;
+    ucs2_word = (uint16_t)(((word[1] << 4) + ((word[2] >> 2) & 0x0F)) << 8);
     ucs2_word |= (word[2] << 6) + (word[3] & 0x3F) & 0xFF;
   }
 

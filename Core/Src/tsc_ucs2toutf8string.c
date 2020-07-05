@@ -34,15 +34,15 @@ void TSC_Ucs2ToUtf8String(const char *str, char *pData, int16_t Size) {
   }
 
   Size -= strlen(pData);
-  while (isalnum(*str) && Size - 5 >= 0) {
+  while (isalnum((int)*str) && Size - 5 >= 0) {
     uint32_t utf8_word = 0;
-    uint16_t ucs2_word = 0;
+    size_t ucs2_word = 0;
     char buff[5] = {0};
     uint8_t i = 0;
 
     strncpy(buff, str, 4);
     sscanf(buff, "%X", &ucs2_word);
-    utf8_word = TSC_Ucs2ToUtf8(ucs2_word);
+    utf8_word = TSC_Ucs2ToUtf8((uint16_t)ucs2_word);
     while (!(utf8_word & 0xFF000000)) {
       utf8_word <<= 8;
     }

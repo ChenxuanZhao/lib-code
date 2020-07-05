@@ -41,7 +41,7 @@ void TSC_Utf8ToUcs2String(const char *str, char *pData, int16_t Size) {
 
     word_size = TSC_GetUtf8Char(str, &utf8_word);
     ucs2_word = TSC_Utf8ToUcs2(utf8_word);
-    sprintf(buff, "%04X", (int)ucs2_word);
+    sprintf(buff, "%04X", (size_t)ucs2_word);
     strcat(pData, buff);
     str += word_size;
     Size -= 4;
